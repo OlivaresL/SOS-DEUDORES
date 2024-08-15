@@ -1,0 +1,93 @@
+/* Asegúrate de incluir estas fuentes en tu HTML */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+
+.contact-promotional-section {
+    position: relative;
+    overflow: hidden;
+    height: 350px; /* Ajusta la altura según tu diseño */
+    background-image: url('../img.fondo/17771-scaled-1.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.contact-promotional-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+    z-index: 1; /* Asegura que el fondo negro esté detrás del contenido */
+}
+
+.contact-promotional-content {
+    position: relative; /* Cambiado a relativo para estar sobre el fondo negro */
+    text-align: center;
+    color: white;
+    padding: 50px; /* Añade un poco de relleno alrededor del contenido */
+    z-index: 2; /* Asegura que el contenido esté sobre el fondo negro */
+    font-family: 'Playfair Display', serif; /* Tipografía elegante para el texto */
+}
+
+.contact-message h2 {
+    font-size: 2.5em; /* Tamaño del título aumentado para mayor visibilidad */
+    color: #ffffff; /* Color rojo oscuro */
+    margin-bottom: 15px; /* Ajusta el margen inferior */
+    font-weight: bold; /* Resalta el título */
+}
+
+.contact-message p {
+    font-size: 1.2em; /* Tamaño del texto aumentado para mayor legibilidad */
+    color: #f9f9f9; /* Color de texto blanco grisáceo */
+    line-height: 1.5em; /* Espaciado entre líneas mejorado */
+    margin-bottom: 20px; /* Ajusta el margen inferior */
+}
+
+.cta-button {
+    padding: 15px 30px; /* Tamaño del botón aumentado */
+    background-color: #5a9bd4; /* Color del botón */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+    text-transform: uppercase; /* Mayúsculas para un aspecto más destacado */
+    font-family: 'Open Sans', sans-serif; /* Tipografía moderna para el botón */
+}
+
+.cta-button:hover {
+    background-color: #5a9bd4bd; /* Color de fondo al pasar el ratón, tono más oscuro del rojo */
+}
+
+/* Diseño responsive */
+@media (max-width: 768px) {
+    .contact-message h2 {
+        font-size: 2em; /* Tamaño del título ajustado para pantallas más pequeñas */
+    }
+
+    .contact-message p {
+        font-size: 1em; /* Tamaño del texto ajustado para pantallas más pequeñas */
+    }
+
+    .cta-button {
+        padding: 12px 24px; /* Tamaño del botón ajustado */
+        font-size: 0.9em; /* Tamaño del texto del botón ajustado */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-message h2 {
+        font-size: 1.5em; /* Tamaño del título ajustado para pantallas muy pequeñas */
+    }
+
+    .contact-message p {
+        font-size: 0.9em; /* Tamaño del texto ajustado para pantallas muy pequeñas */
+    }
+
+    .cta-button {
+        padding: 10px 20px; /* Tamaño del botón ajustado */
+        font-size: 0.8em; /* Tamaño del texto del botón ajustado */
+    }
+}

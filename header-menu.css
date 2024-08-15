@@ -1,0 +1,228 @@
+/* Importar fuente personalizada */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Estilo general del header */
+header {
+    background: #f9f9f9; /* Fondo gris claro */
+    color: #333; /* Texto gris oscuro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Navbar no fija inicialmente */
+    width: 100%;
+    z-index: 1000;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out; /* Transición suave */
+}
+
+/* Header sticky */
+header.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #ffffff00; /* Fondo blanco cuando está fija */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Mantiene la sombra */
+    z-index: 1000;
+    animation: bounceIn 0.6s ease-out; /* Animación de entrada con rebote */
+}
+
+/* Animación de rebote */
+@keyframes bounceIn {
+    0% { transform: translateY(-100%); }
+    60% { transform: translateY(10%); }
+    80% { transform: translateY(-5%); }
+    100% { transform: translateY(0); }
+}
+
+/* Ajuste del tamaño del logo y padding cuando está sticky */
+header.sticky .logo-container img {
+    width: 90%; /* Ajusta el tamaño del logo en estado sticky */
+}
+
+header.sticky .header-container {
+    padding: 10px 20px; /* Ajuste del padding en estado sticky */
+}
+
+/* Ajuste para un desplazamiento adicional al hacer clic en un enlace */
+:target::before {
+    content: '';
+    display: block;
+    height: 80px; /* Altura extra para que el contenido no quede oculto debajo del header */
+    margin-top: -80px; /* Negativo para que el desplazamiento no afecte la posición del contenido */
+}
+
+
+/* Contenedor de la barra superior */
+.top-row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* Contenedor del logo */
+.logo-container img {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Contenedor de los iconos de contacto */
+.contact-icons {
+    display: flex;
+    gap: 10px;
+}
+
+/* Estilo para los iconos */
+.icon-img {
+    width: 24px;
+    height: auto;
+}
+
+/* Estilo para el menú de navegación */
+nav {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+/* Estilos para el menú de navegación en escritorio */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px; /* Espacio entre los enlaces */
+}
+
+.nav-menu li {
+    margin: 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #5a9bd4; /* Azul pastel */
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 5px; /* Bordes redondeados opcionales */
+    transition: color 0.3s ease, background-color 0.3s ease;
+    font-family: 'Roboto', sans-serif; /* Fuente personalizada */
+}
+
+/* Efecto al pasar el ratón sobre los enlaces */
+.nav-menu a:hover,
+.nav-menu a:focus {
+    color: #fff; /* Color del texto al pasar el ratón */
+    background-color: #5a9bd4; /* Fondo del enlace al pasar el ratón */
+}
+
+/* Estilo para el botón de menú */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    z-index: 1001; /* Asegura que esté por encima del menú */
+    position: relative;
+}
+
+.menu-toggle .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #5a9bd4; /* Azul pastel */
+    margin: 5px 0;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Estilo para el botón de cerrar el menú */
+.menu-toggle.active .bar {
+    background-color: #fff; /* Color de las barras cuando está activo */
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+}
+
+/* Estilos para el menú en pantallas pequeñas */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 250px;
+        height: 100vh;
+        background-color: #f0f4f7; /* Fondo pastel claro */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        overflow-y: auto;
+        padding-top: 60px;
+        z-index: 1000;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu.active {
+        transform: translateX(0);
+    }
+
+    .nav-menu li {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .nav-menu a {
+        text-decoration: none;
+        color: #5a9bd4; /* Azul pastel */
+        font-size: 20px;
+        display: block;
+        padding: 10px 20px;
+        transition: color 0.3s ease, background-color 0.3s ease;
+        font-family: 'Roboto', sans-serif; /* Fuente personalizada */
+    }
+
+    .nav-menu a:hover {
+        color: #fff; /* Color del enlace al pasar el ratón */
+        background-color: #5a9bd4; /* Fondo del enlace al pasar el ratón */
+    }
+
+    /* Estilo para el botón de cerrar el menú */
+    .nav-menu::before {
+        content: '\00d7'; /* Símbolo de "X" */
+        font-size: 30px;
+        color: #5a9bd4;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        cursor: pointer;
+        display: none;
+    }
+
+    .nav-menu.active::before {
+        display: block;
+    }
+}
+
+/* Estilos para el header sticky */
+header.sticky {
+    background-color: #f0f4f7; /* Fondo pastel claro cuando es sticky */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+header.delayed {
+    transition: background-color 0.3s;
+}

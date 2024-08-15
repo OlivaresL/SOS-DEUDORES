@@ -1,0 +1,154 @@
+
+/* Contenedor del carrusel */
+.swiper-container {
+    width: 100%; /* Asegura que el contenedor ocupe el ancho completo */
+    height: 100%; /* Asegura que el carrusel ocupe el alto completo del contenedor */
+    max-height: 100dvh; /* Limita la altura máxima para que no exceda el viewport */
+    overflow: hidden; /* Evita el desbordamiento del contenido */
+}
+
+/* Imagen del carrusel */
+.swiper-slide img {
+    width: 100%; /* Asegura que la imagen ocupe el ancho completo del contenedor */
+    height: 100%; /* Asegura que la imagen ocupe el alto completo del contenedor */
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin distorsionar */
+}
+
+/* Contenido de la bienvenida */
+.welcome-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo menos opaco */
+    padding: 15px; /* Ajusta el padding para reducir el espacio interno */
+    border-radius: 8px;
+    width: 90%; /* Aumenta el ancho para reducir el espacio en blanco */
+    max-width: 500px; /* Reduce el ancho máximo */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Ajusta la sombra */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    margin-bottom: 0; /* Elimina el margen inferior para evitar espacio extra */
+}
+
+.welcome-content h1 {
+    font-size: 1.8em; /* Ajusta el tamaño del título */
+    margin: 0 0 10px;
+    
+}
+
+.welcome-content p {
+    font-size: 1em;
+    margin: 0 0 15px; /* Ajusta el margen inferior */
+    
+}
+
+.welcome-content .cta {
+    display: inline-block;
+    padding: 8px 16px; /* Ajusta el padding */
+    font-size: 0.9em; /* Ajusta el tamaño de fuente */
+    color: #fff;
+    background-color: #0056b3;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    border: 1px solid #004494;
+    
+}
+
+.welcome-content .cta:hover {
+    background-color: #004494;
+    
+}
+
+/* Ajustes generales de la sección */
+.welcome-section {
+    position: relative; /* Asegura que el contenido se posicione correctamente */
+    overflow: hidden; /* Evita el desbordamiento del contenido */
+    padding: 0; /* Elimina el padding superior e inferior */
+    margin: 0; /* Elimina márgenes adicionales */
+}
+
+
+.swiper-container {
+    width: 100%; /* El contenedor del carrusel ocupa el 100% del ancho */
+    max-width: none; /* Elimina el ancho máximo para adaptarse a pantallas pequeñas */
+}
+
+/* Contenedor de la imagen del líder */
+.lider-image {
+    overflow: hidden; /* Asegura que la imagen no se salga del contenedor */
+}
+
+/* Imagen del líder */
+.lider-image img {
+    width: 100%; /* Asegura que la imagen ocupe todo el contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    transition: transform 0.3s ease; /* Transición suave para el zoom */
+}
+
+/* Efecto al pasar el cursor sobre la imagen */
+.lider-image:hover img {
+    transform: scale(1.05); /* Escala la imagen al 105% al pasar el cursor */
+}
+
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .header-sos .container {
+        padding: 0 10px; /* Reduce el padding en móviles */
+    }
+
+    .navbar-sos ul {
+        flex-direction: column; /* Los enlaces de la navbar se apilan verticalmente */
+        gap: 15px; /* Espacio menor entre enlaces en móviles */
+    }
+
+    .welcome-section {
+        height: auto; /* Ajusta la altura en pantallas más pequeñas */
+        padding: 0; /* Elimina el padding para móviles */
+    }
+
+    .welcome-content {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .welcome-content h1 {
+        font-size: 1.5em;
+    }
+
+    .welcome-content p {
+        font-size: 0.9em;
+    }
+
+    .welcome-content .cta {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome-section {
+        height: auto; /* Ajusta la altura en pantallas muy pequeñas */
+        padding: 0; /* Elimina el padding para pantallas pequeñas */
+    }
+
+    .welcome-content {
+        width: 95%; /* Aumenta el ancho para pantallas pequeñas */
+        padding: 10px; /* Reduce el padding */
+    }
+
+    .welcome-content h1 {
+        font-size: 1.2em;
+    }
+
+    .welcome-content p {
+        font-size: 0.8em;
+    }
+
+    .welcome-content .cta {
+        font-size: 0.8em;
+        padding: 6px 12px;
+    }
+}

@@ -1,0 +1,124 @@
+/* Estilo general para la sección de servicios y líder */
+.services-lider-section {
+    padding: 60px 0;
+    background-color: #f9f9f9; /* Fondo gris claro */
+}
+
+.services-lider-content {
+    display: flex;
+    align-items: center; /* Alinea la imagen del líder y el contenido verticalmente */
+    justify-content: space-between; /* Espacia la imagen y el contenido */
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap; /* Permite el ajuste en pantallas más pequeñas */
+}
+
+.services-info {
+    flex: 1;
+    max-width: 600px;
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.services-info h2 {
+    font-size: 2.5em; /* Tamaño de fuente del título */
+    color: #BA0C2F; /* Color rojo oscuro */
+    margin-bottom: 20px;
+}
+
+.services-info p {
+    font-size: 1em; /* Tamaño de fuente del párrafo */
+    color: #333; /* Texto gris oscuro */
+    line-height: 1.6em;
+    margin-bottom: 20px; /* Espacio entre párrafos */
+}
+
+.services-list {
+    list-style: none; /* Elimina los puntos predeterminados de la lista */
+    margin: 0;
+    padding: 0;
+}
+
+.services-list li {
+    position: relative; /* Necesario para posicionar la imagen de ticket */
+    padding-left: 40px; /* Espacio para la imagen de ticket */
+    margin-bottom: 20px; /* Espacio entre elementos */
+    font-size: 1em; /* Tamaño de fuente */
+    line-height: 1.6em;
+    color: #333; /* Texto gris oscuro */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transición suave para color y movimiento */
+}
+
+.services-list li:hover {
+    color: #BA0C2F; /* Color rojo oscuro al pasar el ratón */
+    transform: translateX(5px); /* Movimiento hacia la derecha */
+}
+
+.ticket-icon {
+    position: absolute; /* Posiciona la imagen dentro del li */
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); /* Centra verticalmente */
+    width: 25px; /* Tamaño de la imagen */
+    height: 25px; /* Tamaño de la imagen */
+    margin-right: 10px; /* Espacio entre el ticket y el texto */
+}
+
+/* Estilo para la imagen del líder */
+.lider-image {
+    flex: 1;
+    text-align: center; /* Centra la imagen en su contenedor */
+    margin-right: 20px; /* Espacio entre la imagen y el contenido */
+}
+
+.lider-image img {
+    width: 100%; /* La imagen se ajusta al tamaño del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-width: 60%; /* Tamaño máximo de la imagen en pantallas grandes */
+    border-radius: 8px; /* Bordes redondeados si se desea */
+}
+
+/* Estilos responsivos para dispositivos móviles */
+@media (max-width: 1024px) {
+    .services-lider-content {
+        flex-direction: column; /* Coloca la imagen y los servicios en columna en pantallas más pequeñas */
+        align-items: center; /* Centra el contenido verticalmente */
+    }
+
+    .lider-image {
+        margin-bottom: 20px; /* Espacio entre la imagen y el contenido */
+        margin-right: 0; /* Elimina el margen derecho en pantallas más pequeñas */
+    }
+
+    .services-info {
+        text-align: center; /* Alinea el texto al centro en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 768px) {
+    .services-info h2 {
+        font-size: 2em; /* Tamaño de fuente reducido para el título */
+    }
+
+    .services-info p, .services-list {
+        font-size: 0.9em; /* Tamaño de fuente reducido para párrafos y lista */
+    }
+
+    .lider-image img {
+        max-width: 50%; /* Tamaño máximo de la imagen en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .services-info h2 {
+        font-size: 1.6em; /* Tamaño de fuente aún más pequeño para el título */
+    }
+
+    .services-info p, .services-list {
+        font-size: 0.8em; /* Tamaño de fuente aún más pequeño para párrafos y lista */
+    }
+
+    .lider-image img {
+        max-width: 40%; /* Tamaño máximo de la imagen en pantallas muy pequeñas */
+    }
+}

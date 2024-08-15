@@ -1,0 +1,207 @@
+/* Estilos para el footer */
+footer {
+    background-color: #333333;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(45deg, rgba(51,51,51,0.6), rgba(51,51,51,0.8));
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s ease infinite; /* Aumenta la duración para una transición más lenta */
+}
+
+/* Animación para el fondo */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+}
+
+/* Contenedor del footer */
+.footer-container {
+    max-width: 940px; /* Aumento del ancho máximo del contenedor */
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+/* Mostrar el footer */
+footer.show-footer .footer-container {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estilos para las columnas del footer */
+.footer-address,
+.footer-cta,
+.footer-social,
+.footer-payment-methods {
+    flex: 1 1 calc(25% - 40px); /* Asegura el ancho en escritorio */
+    margin: 20px;
+    color: #ffffff;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer-address:hover,
+.footer-cta:hover,
+.footer-social:hover,
+.footer-payment-methods:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.footer-address:first-child {
+    border-left: none;
+}
+
+.footer-address h3 {
+    margin: 0 0 10px;
+    color: #e0e0e0;
+    font-size: 1.1em;
+}
+
+.footer-address img {
+    display: block;
+    margin: 10px auto;
+    max-width: 180px;
+}
+
+/* Estilo específico para la sección de contacto */
+.footer-cta {
+    margin-top: 20px;
+}
+
+.footer-cta p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #ffffff; /* Cambia el color del texto a blanco para mejor contraste */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Agrega una sombra sutil al texto */
+    line-height: 1.4; /* Ajusta el interlineado para mejorar la legibilidad */
+}
+
+/* Contact item styles */
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contact-icon {
+    width: 24px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-subtitle {
+    font-size: 0.8em;
+    color: #666;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-social h4 {
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 1.1em;
+}
+
+.footer-social .social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.footer-social .social-media a {
+    color: #e0e0e0;
+    text-decoration: none;
+    margin: 0 10px;
+    display: inline-flex;
+    align-items: center;
+    transition: transform 0.3s, filter 0.3s, color 0.3s;
+}
+
+.footer-social .social-media a img {
+    max-width: 35px;
+}
+
+.footer-social .social-media a:hover {
+    transform: scale(1.2);
+    filter: brightness(1.3);
+    color: #ffffff;
+}
+
+.footer-payment-methods {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-payment-methods h4 {
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 1.1em;
+}
+
+.payment-methods {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.payment-methods img {
+    max-width: 130px;
+    margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .footer-address,
+    .footer-cta,
+    .footer-social,
+    .footer-payment-methods {
+        flex: 1 1 100%; /* Ajusta al 100% del ancho en móviles */
+        margin: 10px 0;
+        text-align: center;
+        border-left: none;
+        padding: 10px; /* Ajusta padding para móviles */
+        box-shadow: none; /* Elimina el sombreado en móviles */
+    }
+
+    .footer-address img {
+        max-width: 150px;
+    }
+
+    .footer-social .social-media {
+        margin-top: 10px;
+    }
+
+    .payment-methods img {
+        max-width: 110px;
+    }
+}

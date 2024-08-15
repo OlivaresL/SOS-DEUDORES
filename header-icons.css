@@ -1,0 +1,57 @@
+/* Primera fila: Logo e íconos de contacto */
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    align-items: center;
+}
+
+/* Estilo del logo */
+#site-logo {
+    width: 200px; /* Ajusta el tamaño del logo */
+    height: auto;
+    transition: transform 0.3s ease; /* Transición para el efecto de movimiento */
+}
+
+/* Efecto al pasar el cursor sobre el logo */
+#site-logo:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño del logo */
+}
+
+/* Contenedor de íconos de contacto */
+.contact-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Estilo de los íconos de contacto */
+.contact-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #3b5998; /* Color de fondo por defecto */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-icons a img.icon-img {
+    max-width: 70%;
+    max-height: 60%;
+    filter: brightness(0) invert(1); /* Cambia la imagen a blanco */
+}
+
+/* Efecto al pasar el cursor sobre los íconos de contacto */
+.contact-icons a:hover {
+    transform: scale(1.1);
+    background-color: #BA0C2F; /* Cambia el fondo al pasar el cursor */
+}
+
+
+
+.contact-icons a.telefono {
+    background-color: #BA0C2F;
+}

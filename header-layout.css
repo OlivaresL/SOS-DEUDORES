@@ -1,0 +1,26 @@
+/* Contenedor del header */
+.header-container {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en columnas */
+    align-items: center;
+    padding: 10px 20px;
+
+}
+
+
+
+/* Primera fila: Logo e íconos de contacto */
+.header-container > .logo-container,
+.header-container > .contact-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Estilo del logo */
+#site-logo {
+    width: 200px; /* Ajusta el tamaño del logo */
+    height: auto;
+}

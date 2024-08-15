@@ -1,0 +1,11 @@
+/* Sección de Testimonios */
+.testimonials-section {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.testimonials-section .testimonial {
+    margin-bottom: 20px;
+}
